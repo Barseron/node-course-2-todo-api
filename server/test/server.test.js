@@ -10,9 +10,9 @@ const todos = [{
   text: 'First test todo'
 }, {
   _id: new ObjectID(),
-  text: 'Second test todo',  
-  completed:true,
-  completedAt:333
+  text: 'Second test todo',
+  completed: true,
+  completedAt: 333
 }];
 
 beforeEach((done) => {
@@ -141,6 +141,7 @@ describe('DELETE /todos/:id', () => {
       .end(done);
   });
 });
+
 describe('PATCH /todos/:id', () => {
   it('should update the todo', (done) => {
     var hexId = todos[0]._id.toHexString();
